@@ -5,10 +5,7 @@ require('dotenv').config();
 
 
 
-app.use(cors({
-  origin: 'https://my-frontend.onrender.com',
-  credentials: true
-}));
+
 
 
 const app = express();
@@ -25,3 +22,8 @@ app.use('/api/newsletter', require('./routes/newsletter'));
 mongoose.connect(process.env.MONGO_URI)
   .then(() => app.listen(5000, () => console.log("Server running on 5000")))
   .catch(err => console.log(err));
+
+  app.use(cors({
+  origin: 'https://my-frontend.onrender.com',
+  credentials: true
+}));
