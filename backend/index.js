@@ -4,7 +4,6 @@ const cors = require('cors');
 require('dotenv').config();
 
 
-const cors = require('cors');
 
 app.use(cors({
   origin: 'https://my-frontend.onrender.com',
